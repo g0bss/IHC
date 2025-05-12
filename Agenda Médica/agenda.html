@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda médica</title>
+    <title>Agenda Médica</title>
 </head>
 <body>
-    <h2>Bem-vindo à sua agenda médica!</h2>
+    <h2>Agenda Médica</h2>
+
+    <form>
+        <label for="doutor">Médico:</label>
+        <input type="text" id="doutor" name="doutor" required><br><br>
+
+        <label for="especialidade">Especialidade:</label>
+        <input type="text" id="especialidade" name="especialidade" required><br><br>
+
+        <label for="data">Data da Consulta:</label>
+        <input type="date" id="data" name="data" required><br><br>
+
+        <label for="horario">Horário:</label>
+        <input type="time" id="horario" name="horario" required><br><br>
+
+        <button type="submit">Agendar</button>
+        <button type="reset">Limpar</button>
+    </form>
+
+    <h3>Tabela de Dias do Mês</h3>
     <table border="1">
         <tr>
-            <th>Data</th>
-            <th>Hora</th>
-            <th>Paciente</th>
-            <th>Médico</th>
+            <th>Dom</th> <th>Seg</th> <th>Ter</th> <th>Qua</th> <th>Qui</th> <th>Sex</th> <th>Sáb</th>
         </tr>
         <tr>
-            <td>06/05/2025</td>
-            <td>09:00</td>
-            <td>-</td>
-            <td>-</td>
+            <td></td> <td></td> <td></td> <td>1</td> <td>2</td> <td>3</td> <td>4</td>
         </tr>
         <tr>
-            <td>06/05/2025</td>
-            <td>11:00</td>
-            <td>Pedro Almeida</td>
-            <td>Dr. Ana Cristine</td>
+            <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> <td>10</td> <td>11</td>
         </tr>
         <tr>
-            <td>06/05/2025</td>
-            <td>10:00</td>
-            <td>-</td>
-            <td>-</td>
+            <td>12</td> <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td> <td>18</td>
         </tr>
         <tr>
-            <td>06/05/2025</td>
-            <td>14:00</td>
-            <td>Maria Oliveira</td>
-            <td>Dr. Huston</td>
+            <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td> <td>25</td>
         </tr>
         <tr>
-            <td>06/05/2025</td>
-            <td>15:00</td>
-            <td>-</td>
-            <td>-</td>
+            <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td> <td>31</td> <td></td>
+        </tr>
     </table>
-    <p><a href="login.html">Sair</a></p>
+
+    <br>
+    <button onclick="window.location.href='login.html'">Sair</button>
 </body>
 </html>
