@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
 </head>
+
 <body>
     <h2>Cadastro</h2>
     <form action="login.html" method="get">
@@ -26,7 +27,11 @@
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" minlength="8" 
                pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}" 
-               title="A senha deve ter pelo menos 8 caracteres, incluindo 1 número, 1 letra maiúscula e 1 letra minúscula" required><br><br>
+               title="A senha deve ter pelo menos 8 caracteres, incluindo 1 número, 1 letra maiúscula e 1 letra minúscula" required><br>
+                <p style="font-size: 12px; color: red;">A senha deve conter pelo menos 8 caracteres *</p>
+                <p style="font-size: 12px; color: red">A senha deve conter pelo menos 1 numero *</p>  
+                <p style="font-size: 12px; color: red">A senha deve conter pelo menos 1 letra maiúscula *</p> 
+                <p style="font-size: 12px; color: red">A senha deve conter pelo menos 1 minúscula *</p><br><br>  
 
         <label for="confirmarsenha">Confirmar Senha:</label>
         <input type="password" id="confirmarsenha" name="confirmarsenha" required><br><br>
