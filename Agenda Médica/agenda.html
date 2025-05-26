@@ -3,84 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agenda.css">
     <title>Agenda Médica</title>
 </head>
 <body>
     <h2>Agenda Médica</h2>
+    <div class="agenda-flex">
+        <form>
+            <label for="planosaude">Plano de saúde:</label>
+            <select id="planosaude" name="planosaude" required>
+                <option value="">--Selecione--</option>
+                <option value="Plano 1">Plano 1</option>
+                <option value="Plano 2">Plano 2</option>
+                <option value="Plano 3">Plano 3</option>
+            </select>
 
-    <form>
-        <label for="planosaude">Plano de saúde:</label>
-        <select type="select" id="planosaude" name="planosaude" required>
-            <option value=" ">--Selecione-- </option>
-            <option value=" ">Plano 1 </option>
-            <option value=" ">Plano 2 </option>
-            <option value=" ">Plano 3 </option>
-        </select><br><br>
+            <label for="doutor">Médico:</label>
+            <select id="doutor" name="doutor" required>
+                <option value="">--Selecione--</option>
+                <option value="Dr. Fulano">Dr. Fulano</option>
+                <option value="Dr. Ciclano">Dr. Ciclano</option>
+                <option value="Dr. Ronaldo">Dra. Ana Cristine</option>
+            </select>
 
-        <label for="doutor">Médico:</label>
-        <select type="select" id="doutor" name="doutor" required>
-            <option value=" ">--Selecione-- </option>
-            <option value=" ">Dr. Fulano </option>
-            <option value=" ">Dr. Ciclano </option>
-            <option value=" ">Dr. Ronaldo </option>
-        </select><br><br>
+            <label for="especialidade">Especialidade:</label>
+            <select id="especialidade" name="especialidade" required>
+                <option value="">--Selecione--</option>
+                <option value="Neurologia">Neurologia</option>
+                <option value="Dermatologia">Dermatologia</option>
+                <option value="Nefrologia">Nefrologia</option>
+                <option value="Cardiologia">Cardiologia</option>
+            </select>
 
+            <label for="data">Data da Consulta:</label>
+            <input type="date" id="data" name="data" required>
 
-        <label for="especialidade">Especialidade:</label>
-        <select type="select" id="especialidade" name="especialidade" required>
-            <option value=" ">--Selecione-- </option>
-            <option value=" ">Neurologia </option>
-            <option value=" ">Dermatologia </option>
-            <option value=" ">Nefrologia </option>
-            <option value=" ">Cardiologia </option>
-        </select><br><br>
+            <label for="horario">Horário:</label>
+            <input type="time" id="horario" name="horario" required>
 
-        <label for="data">Data da Consulta:</label>
-        <input type="date" id="data" name="data" required><br><br>
+            <button type="submit">Agendar</button>
+            <button type="reset">Limpar</button>
+        </form>
 
-        <label for="horario">Horário:</label>
-        <input type="time" id="horario" name="horario" required><br><br>
-
-        <button type="submit">Agendar</button>
-        <button type="reset">Limpar</button>
-    </form>
-
-    <style>
-        table {
-            width: 40%;
-            height: 400px;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 5px;
-            text-align: center;
-        }
-    </style>
-    
-
-    <h2>Tabela de dias do mês de maio</h2>
-    <table border="6">
-        <tr>
-            <th>Dom</th> <th>Seg</th> <th>Ter</th> <th>Qua</th> <th>Qui</th> <th>Sex</th> <th>Sáb</th>
-        </tr>
-        <tr>
-            <td></td> <td></td> <td></td> <td></td> <td>1</td> <td>2</td> <td>3</td>
-        </tr>
-        <tr>
-            <td style="color:red">4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> <td>10</td>
-        </tr>
-        <tr>
-            <td style="color:red">11</td> <td>12</td> <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td>
-        </tr>
-        <tr>
-            <td style="color:red">18</td> <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
-        </tr>
-        <tr>
-            <td style="color:red">25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td> <td>31</td>
-        </tr>
-    </table>
-
-    <br>
-    <button style="width:100px; height:50px;" onclick="window.location.href='login.html'">Sair</button>
+        <div class="calendario-box">
+            <h2>Tabela de dias do mês de maio</h2>
+            <table class="calendario">
+                <tr>
+                    <th>Dom</th> <th>Seg</th> <th>Ter</th> <th>Qua</th> <th>Qui</th> <th>Sex</th> <th>Sáb</th>
+                </tr>
+                <tr>
+                    <td></td> <td></td> <td></td> <td></td> <td>1</td> <td>2</td> <td>3</td>
+                </tr>
+                <tr>
+                    <td style="color:red">4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> <td>10</td>
+                </tr>
+                <tr>
+                    <td style="color:red">11</td> <td>12</td> <td>13</td> <td>14</td> <td>15</td> <td>16</td> <td>17</td>
+                </tr>
+                <tr>
+                    <td style="color:red">18</td> <td>19</td> <td>20</td> <td>21</td> <td>22</td> <td>23</td> <td>24</td>
+                </tr>
+                <tr>
+                    <td style="color:red">25</td> <td>26</td> <td>27</td> <td>28</td> <td>29</td> <td>30</td> <td>31</td>
+                </tr>
+            </table>
+            <button class="sair-btn" onclick="window.location.href='login.html'">Sair</button>
+        </div>
+    </div>
 </body>
 </html>
