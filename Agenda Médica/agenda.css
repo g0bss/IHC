@@ -1,0 +1,161 @@
+body {
+    background: #fff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+h2 {
+    color: #7c3aed;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.agenda-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+form {
+    background: #f8f8ff;
+    border: 1.5px solid #a78bfa;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.07);
+    width: 340px;
+    padding: 2rem 2rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    color: #6d28d9;
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+input[type="date"],
+input[type="time"],
+select {
+    padding: 0.7rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+    background: #fff;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    border: 1.5px solid #a78bfa;
+}
+
+button[type="submit"], button[type="reset"] {
+    background: #7c3aed;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover, button[type="reset"]:hover {
+    background: #6d28d9;
+}
+
+.calendario-box {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(124, 58, 237, 0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+    min-width: 370px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendario {
+    width: 100%;
+    max-width: 370px;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.07);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+th {
+    background: #a78bfa;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+td[style*="color:red"] {
+    color: #e11d48 !important;
+    font-weight: bold;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.sair-btn {
+    display: block;
+    margin: 1.5rem auto 0 auto;
+    width: 120px;
+    height: 48px;
+    background: #fff;
+    color: #7c3aed;
+    border: 2px solid #7c3aed;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sair-btn:hover {
+    background: #f3e8ff;
+    color: #6d28d9;
+    border-color: #6d28d9;
+}
+
+@media (max-width: 900px) {
+    .agenda-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    .calendario-box, form {
+        width: 98%;
+        min-width: unset;
+        max-width: 98%;
+        padding: 1rem;
+    }
+    .calendario {
+        max-width: 100%;
+    }
+}
